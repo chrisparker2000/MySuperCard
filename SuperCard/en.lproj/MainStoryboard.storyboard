@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3012" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Super Card View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="SuperCardViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0q7-RX-mOY" customClass="PlayingCardView">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="XBD-Xc-iue" appends="YES" id="OlD-CT-bWl"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.070777995610000005" green="0.52156865600000002" blue="0.041979193980000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="0q7-RX-mOY" firstAttribute="top" secondItem="3" secondAttribute="top" constant="119" id="2bp-qj-7Sq"/>
+                            <constraint firstItem="0q7-RX-mOY" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="56O-sH-0yk"/>
+                            <constraint firstItem="0q7-RX-mOY" firstAttribute="centerY" secondItem="3" secondAttribute="centerY" type="default" id="OUJ-V5-i7r"/>
+                            <constraint firstItem="0q7-RX-mOY" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="55" id="Qju-h3-2g5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playingCardView" destination="0q7-RX-mOY" id="aIB-C4-j45"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="XBD-Xc-iue">
+                    <connections>
+                        <action selector="swipe:" destination="2" id="fNV-L5-nr4"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
